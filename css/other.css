@@ -1,0 +1,53 @@
+body {
+  background-color: black;
+  text-align: center;
+}
+
+.header {
+  background-image: url('../../image/header.png');
+  size: 100%;
+  background-color: #cccccc;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+.Youtube a, .youtube {
+  color: Red;
+}
+
+.Itchio, .Itchio a {
+  color: deeppink;
+}
+
+.GrupWA, .GrupWA a{
+  color: darkgreen;
+}
+
+.grupLine, .grupLine a {
+  color: green;
+}
+
+.Discord, .Discord a {
+  color: slateblue;
+}
+
+.Facebook, .Facebook a {
+  color: dodgerblue;
+}
+
+.Instagram, .Instagram a {
+  color: purple;
+}
+
+.Saweria, .Saweria a {
+  color: yellow;
+}
+
+.Socialbuzz, .Socialbuzz a{
+color: orangered;
+}

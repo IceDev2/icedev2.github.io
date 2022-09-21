@@ -1,0 +1,25 @@
+body {
+  background-color: black;
+}
+
+.header {
+  background-image: url('../../image/header.png');
+  size: 100%;
+  background-color: #cccccc;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Header {
+  width: 50%;
+  height: auto;
+}

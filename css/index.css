@@ -1,0 +1,78 @@
+body {
+  background-color: black;
+}
+
+.header {
+  background-image: url('../image/header.png');
+  size: 100%;
+  background-color: #cccccc;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+
+.link {
+  list-style-type: none;
+  text-align: center;
+}
+
+.info {
+  color: white;
+}
+
+.informasi {
+  color: white;
+  font-family: Balinesia;
+  text-align: center;
+}
+
+.penjelasan {
+  color: #0AA1DD;
+  font-family: Hirosima;
+  text-align: center;	
+  font-size: 150%;
+} 
+
+.garis {
+  color: white;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.itchIO {
+  padding: 20,0,20,0;
+}
+
+.newPostText {
+  color: #fff;
+  padding: 20,0,20,0;
+}
+
+.NewGame {
+  color: #0AA1DD;
+}
+
+.newVideo {
+  color: #0AA1DD;
+}
+
+.games {
+  color: deeppink;
+}
+
+.link a {
+  color: mediumblue;
+}
+
+.bio a {
+  color: yellow;
+}
+
+.other a {
+  color: grey;
+}

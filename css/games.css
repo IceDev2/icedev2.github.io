@@ -1,0 +1,22 @@
+body {
+  background-color: black;
+}
+
+.header {
+  background-image: url('../../image/header.png');
+  size: 100%;
+  background-color: #cccccc;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+h3 {
+  color: #0AA1DD;
+  font-family: mogen-Bold;
+}
+
+h1 {
+  color: white;
+  font-family: DK;
+}

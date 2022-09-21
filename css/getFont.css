@@ -1,0 +1,16 @@
+@font-face {
+  font-family: Balinesia;
+  src: url("../../font/Balinesia.otf");
+  
+  font-family: Hiroshima;
+  src: url("../../font/Hiroshima.otf");
+  
+  font-family: mogen-Bold;
+  src: url("../../font/Mogen-Bold.ttf");
+  
+  font-family: Dripink;
+  src: url("../../font/Dripink.otf");
+  
+  font-family: DK;
+  src: url("../../font/DK.otf")
+}

@@ -1,0 +1,39 @@
+body {
+  background-color: black;
+  text-align: center;
+}
+
+.header {
+  background-image: url('../../image/header.png');
+  size: 100%;
+  background-color: #cccccc;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+.perkenalan {
+  color: #fff;
+  padding: 16,0,16,0;
+  font-family: DK;
+}
+
+.penjelasan { 
+  color: #0AA1DD;
+  font-family: Hirosima;
+  text-align: center;
+  font-size: 150%;
+}
+
+.Q {
+  color: white;
+  font-size: 20px;
+  font-family: DK;
+}
+
+.A {
+  color: #0AA1DD;
+  font-family: Hirosima;
+  font-size: 150%;
+  text-align: center;
+}
