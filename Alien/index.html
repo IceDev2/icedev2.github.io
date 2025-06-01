@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot Alien Translator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="theme-default">
+    <div class="container">
+      <!-- Sidebar Sesi -->
+      <aside class="sidebar">
+        <h2>Sesi Chat</h2>
+        <div class="session-list" id="sessionList"></div>
+        <button onclick="createNewSession()">+ Sesi Baru</button>
+
+        <div class="session-actions">
+          <button onclick="exportCurrentSession()">📁 Export Sesi</button>
+          <button onclick="exportAllSessions()">📦 Export Semua</button>
+          <button onclick="document.getElementById('importInput').click()">
+            📥 Import
+          </button>
+          <input
+            type="file"
+            id="importInput"
+            accept=".json"
+            hidden
+            onchange="importSessions(event)"
+          />
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <h1>👽 Chatbot Alien Translator 👽</h1>
+
+        <div class="chatbox" id="chatbox"></div>
+
+        <div class="input-group">
+          <label class="label">Mode:</label>
+          <select id="translateMode">
+            <option value="humanToAlien">Manusia → Alien</option>
+            <option value="alienToHuman">Alien → Manusia</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label class="label">Tema:</label>
+          <select id="themeSelector">
+            <option value="default">Default</option>
+            <option value="lightBlue">Light Blue</option>
+            <option value="dark">Dark</option>
+            <option value="neon">Neon</option>
+            <option value="pastel">Pastel</option>
+            <option value="cyberpunk">Cyberpunk</option>
+            <option value="sunset">Sunset</option>
+            <option value="forest">Forest</option>
+            <option value="ocean">Ocean</option>
+            <option value="violet">Violet</option>
+            <option value="coral">Coral</option>
+            <option value="gold">Gold</option>
+            <option value="mint">Mint</option>
+            <option value="cherry">Cherry</option>
+            <option value="midnight">Midnight</option>
+            <option value="retro">Retro</option>
+            <option value="tropical">Tropical</option>
+            <option value="lavender">Lavender</option>
+            <option value="coffee">Coffee</option>
+            <option value="space">Space</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <input type="text" id="userInput" placeholder="Ketik pesan..." />
+          <button onclick="sendMessage()">Kirim</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

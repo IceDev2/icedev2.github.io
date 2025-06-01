@@ -1,0 +1,317 @@
+/* Base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  display: flex;
+  min-height: 100vh;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: fit-content;
+}
+
+.session-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.session-item {
+  padding: 8px 12px;
+  background-color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.session-item.active {
+  background-color: #007acc;
+  color: white;
+}
+
+.session-item:hover {
+  background-color: #e0e0e0;
+}
+
+.session-item input[type="text"] {
+  width: calc(100% - 30px);
+  padding: 4px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.session-item button {
+  font-size: 12px;
+  padding: 2px 5px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.chatbox {
+  width: 100%;
+  max-width: 100%;
+  height: 400px;
+  border: 2px solid #99ccff;
+  border-radius: 10px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 70%;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.user {
+  align-self: flex-end;
+  background-color: #cce5ff;
+}
+
+.bot {
+  align-self: flex-start;
+  background-color: #d6ecf2;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #99ccff;
+  border-radius: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #99ccff;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.session-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.session-actions button {
+  font-size: 13px;
+  padding: 6px 10px;
+}
+
+/* === RESPONSIVE DESIGN === */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .chatbox {
+    height: 300px;
+  }
+
+  .input-group input[type="text"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button,
+  select {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 15px;
+  }
+
+  .session-item input[type="text"] {
+    font-size: 13px;
+  }
+}
+
+/* === THEME STYLES === */
+body.theme-default {
+  background-color: #e6f2ff;
+  color: #333;
+}
+
+body.theme-lightBlue {
+  background-color: #add8e6;
+  color: #000;
+}
+
+body.theme-dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.theme-neon {
+  background-color: #0d0d0d;
+  color: #00ffcc;
+}
+
+body.theme-pastel {
+  background-color: #fcefee;
+  color: #5a2d5c;
+}
+
+body.theme-cyberpunk {
+  background-color: #0b0c2a;
+  color: #00ffff;
+}
+
+body.theme-sunset {
+  background-color: #ff9a9e;
+  color: #fff;
+}
+
+body.theme-forest {
+  background-color: #228b22;
+  color: #fff;
+}
+
+body.theme-ocean {
+  background-color: #4b9cd3;
+  color: #fff;
+}
+
+body.theme-violet {
+  background-color: #a87be2;
+  color: #fff;
+}
+
+body.theme-coral {
+  background-color: #ff7f50;
+  color: #fff;
+}
+
+body.theme-gold {
+  background-color: #ffd700;
+  color: #333;
+}
+
+body.theme-mint {
+  background-color: #98fb98;
+  color: #000;
+}
+
+body.theme-cherry {
+  background-color: #de3163;
+  color: #fff;
+}
+
+body.theme-midnight {
+  background-color: #000080;
+  color: #fff;
+}
+
+body.theme-retro {
+  background-color: #fdf6e3;
+  color: #586e75;
+}
+
+body.theme-tropical {
+  background-color: #00fa9a;
+  color: #000;
+}
+
+body.theme-lavender {
+  background-color: #e6e6fa;
+  color: #000;
+}
+
+body.theme-coffee {
+  background-color: #d2b48c;
+  color: #000;
+}
+
+body.theme-space {
+  background-color: #000000;
+  color: #ffffff;
+  background-image: radial-gradient(#fff2 1px, transparent 1px);
+  background-size: 20px 20px;
+}
