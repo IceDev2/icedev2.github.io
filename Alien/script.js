@@ -271,23 +271,31 @@ function importSessions(event) {
     try {
       const importedSessions = JSON.parse(e.target.result);
 
-      if (!importedSessions.hasOwnProperty("messages")) {
-        // Jika impor banyak sesi
-        sessions = { ...sessions, ...importedSessions };
-      } else {
-        // Jika hanya satu sesi
-        const newId = "sesi-" + Date.now();
-        sessions[newId] = importedSessions;
-        sessions[newId].name = importedSessions.name || "Sesi Impor";
+      // Validasi format JSON
+      const isValidFormat = Object.values(importedSessions).every(
+        (session) =>
+          session.hasOwnProperty("name") && session.hasOwnProperty("messages")
+      );
+
+      if (!isValidFormat) {
+        alert("⚠️ Format file tidak valid. Harus berupa sesi chatbot.");
+        return;
       }
 
+      // Timpa semua sesi yang ada dengan yang diimpor
+      sessions = importedSessions;
       currentSessionId = Object.keys(sessions)[0];
+
       saveSessions();
       renderSessionList();
       loadSessionToChatbox();
-      alert("✅ Sesi berhasil diimpor!");
+
+      alert("✅ Berhasil mengimpor semua sesi!");
     } catch (err) {
-      alert("❌ Gagal membaca file.");
+      alert(
+        "❌ Gagal membaca file. Pastikan ini adalah file export chatbot yang benar."
+      );
+      console.error(err);
     }
   };
   reader.readAsText(file);
